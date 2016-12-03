@@ -1,6 +1,5 @@
-<% All items posted %>
+<ul> Toutes les annonces </ul>
 
 <% @posts.each do |post| %>
-  <%= post.name %>
-  <%= post.description %>
+  <li><%= post.title %>: <%= post.description %></li>
 <% end %>

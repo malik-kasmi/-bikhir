@@ -42,7 +42,7 @@ class Owner::PostsController < ApplicationController
 private
 
   def post_params
-    params.require(:post).permit(:title, :category, :description, :price)
+    params.require(:post).permit(:title, :category, :description, :price, :photo, :photo_cache)
   end
 
 end

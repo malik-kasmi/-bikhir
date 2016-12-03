@@ -1,16 +1,26 @@
-<h1> Toutes les annonces </h1>
+<div class="text-center">
+  <h1> Toutes les annonces </h1>
+</div>
 
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <% @posts.each do |post| %>
-        <div>
-          <%= post.title %>
+  <div class="row padded">
+    <% @posts.each do |post| %>
+      <div class="col-xs-12 col-sm-6 col-lg-4">
+        <div class="padded-light">
+          <div class="badge-bordered padded-light rounded bg-card-user text-center">
+            <div class="badge-bordered rounded bg-card-user text-center">
+            <%= image_tag "logo.png",size: "100x100", class:"card-user avatar avatar-large" %>
+            </div>
+            <div>
+            <p><strong><%= post.title %></strong></p>
+            <p><%= post.description %></p>
+          </div>
+          <div>
+        <%= link_to "View", post_path(post), class:"btn btn-success" %>
+      </div>
+          </div>
         </div>
-        <div>
-          <%= post.description %>
-        </div>
+      </div>
     <% end %>
-    </div>
   </div>
 </div>

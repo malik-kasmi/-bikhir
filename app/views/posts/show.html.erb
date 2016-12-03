@@ -1,4 +1,8 @@
 <h1>Annonce selectionee</h1>
 
-<% @post.name %>
+<% @post.title %>
 <%= @post.description %>
+
+<div class="padded text-center">
+<%= link_to "Accueil", root_path, class:"btn btn-default" %>
+</div>

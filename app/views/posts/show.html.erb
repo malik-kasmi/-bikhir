@@ -2,6 +2,7 @@
 
 <% @post.title %>
 <%= @post.description %>
+<%= cl_image_tag @post.photo, height: 280, width: 280, crop: :fill %>
 
 <div class="padded text-center">
 <%= link_to "Accueil", root_path, class:"btn btn-default" %>

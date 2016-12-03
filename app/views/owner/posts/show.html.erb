@@ -2,11 +2,11 @@
 <p><strong> Categorie: </strong><%= @post.category %></p>
 <p><strong> Prix: </strong><%= @post.price %> </p>
 <p><strong> Description: </strong><%= @post.description %></p>
+<p><%= cl_image_tag @post.photo, height: 280, width: 280, crop: :fill %></p>
 
 
 
 <div class='alert'>
-      <%= link_to "Home", root_path, class:"btn btn-default" %>
-      <%= link_to "Toutes les annonces", posts_path, class:"btn btn-default" %>
+      <%= link_to "Editer mon annonce", edit_owner_post_path(@post), class:"btn btn-default" %>
       <%= link_to "Mes annonces", owner_posts_path, class:"btn btn-default" %>
   </div>

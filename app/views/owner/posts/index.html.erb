@@ -2,30 +2,21 @@
   <h1> Mes annonces </h1>
 </div>
 
-<div>
-  <div class="card-padded">
-    <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-12">
-      <% @posts.each do |t| %>
-            <div class="card" style="background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.8))">
-              <div class="card-category">
-                <%= t.title %>
-              </div>
-              <div class="card-description">
-                <h2><%= t.description %></h2>
-              </div>
-              <%= image_tag "logo.png",size: "100x100", class:"card-user avatar avatar-large" %>
-            </div>
-
-            <div class='alert'>
-              <%= link_to "View", owner_post_path(t), class:"btn btn-default" %>
-              <%= link_to "Edit", edit_owner_post_path(t), class:"btn btn-default" %>
-              <%= link_to "Delete", owner_post_path(t), method: :delete, data: {confirm: "are you sure?"}, class:"btn btn-default" %>
-            </div>
-      <% end %>
+<div class="container">
+  <div class="row padded">
+    <% @posts.each do |post| %>
+      <div class="col-xs-12 col-sm-6 col-lg-4">
+        <div class="badge-bordered padded-light rounded bg-card-user text-center">
+          <%= cl_image_tag post.photo, height: 280, width: 280, crop: :fill %>
+          <div>
+            <p><strong><%= post.title %></strong></p>
+            <p><%= post.description %></p>
+            <%= link_to "Nchouf", owner_post_path(post), class:"btn btn-default" %>
+            <%= link_to "Editer", edit_owner_post_path(post), class:"btn btn-default" %>
+            <%= link_to "Supprimer", owner_post_path(post), method: :delete, data: {confirm: "Tu veux vraiment la supprimer?"}, class:"btn btn-default" %>
           </div>
         </div>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>

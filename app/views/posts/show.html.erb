@@ -1,9 +1,38 @@
-<h1>Annonce selectionee</h1>
+<div class="text-center">
+  <h1><%= @post.title %></h1>
+</div>
 
-<% @post.title %>
-<%= @post.description %>
-<%= cl_image_tag @post.photo, height: 280, width: 280, crop: :fill %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8">
+      <div class="padded-light bg-white card-rounded text-center">
+        <div class="padded-light">
+          <i class="fa fa-calendar" aria-hidden="true"></i>  <%= @post.created_at %>
+        </div>
+        <%= cl_image_tag @post.photo, height: 400, width: 400, crop: :fill %>
+      </div>
+    </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="padded-light bg-white card-rounded card-seller">
+          <ul> Informations sur le vendeur: </ul>
+            <li><%= @post.owner.email %></li>
+            <li><%= @post.owner.phone %></li>
+        </div>
+        <div class="padded-light bg-white card-rounded card-seller card-advertising">
+          <h4> Votre publicite ici </h4>
+        </div>
+      </div>
+    <div class="col-xs-12 col-sm-8">
+      <div class="padded-light bg-white card-rounded card-description">
+        <h4> DESCRIPTION</h4>
+        <br>
+        <%= @post.description %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="padded text-center">
+
+<div class="padded-light text-center">
 <%= link_to "Accueil", root_path, class:"btn btn-default" %>
 </div>

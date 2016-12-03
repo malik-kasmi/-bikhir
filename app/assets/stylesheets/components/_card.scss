@@ -1,17 +1,33 @@
-.card-post {
-  display: flex;
-  align-content: space-around;
-}
-.card-category {
-  position: absolute;
-  top: 65px;
-  left: 45%;
-  font-size: 30px;
-  text-transform: uppercase;
+// .card-post {
+//   display: flex;
+//   align-content: space-around;
+// }
+// .card-category {
+//   position: absolute;
+//   top: 65px;
+//   left: 45%;
+//   font-size: 30px;
+//   text-transform: uppercase;
 
+// }
+// .card-description {
+//   position: absolute;
+//   bottom: 10px;
+//   left: 10px;
+// }
+
+.card-rounded {
+  border-radius: 5px;
 }
+
 .card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  margin-top: 10px;
+}
+
+.card-seller {
+  margin-left: 5px;
+}
+
+.card-advertising {
+  margin-top: 5px;
 }

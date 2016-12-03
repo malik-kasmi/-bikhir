@@ -9,7 +9,7 @@
 
           <div class="form-inputs">
             <%= f.input :title, required: true, autofocus: true %>
-            <%= f.input :category, required: true, autofocus: true %>
+            <%= f.input :category, collection: @categories, required: true, autofocus: true %>
             <%= f.input :description, required: true, autofocus: true %>
             <%= f.input :price, required: true, autofocus: true %>
               <%= f.input :photo %>

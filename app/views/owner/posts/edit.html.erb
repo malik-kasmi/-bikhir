@@ -4,7 +4,7 @@
       <h1> Editer mon annonce </h1>
       <%= simple_form_for([:owner, @post]) do |f| %>
         <%= f.input :title %>
-        <%= f.input :category %>
+        <%= f.input :category, collection: @categories %>
         <%= f.input :price %>
         <%= f.input :description %>
         <%= f.input :photo %>

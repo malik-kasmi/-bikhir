@@ -6,6 +6,7 @@ class Owner::PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @categories = ["Informatique et multimedia", "Vehicules", "Immobilier", "Habillement", "Emploi","Autre"]
   end
 
   def create
@@ -18,6 +19,7 @@ class Owner::PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @categories = ["Informatique et multimedia", "Vehicules", "Immobilier", "Habillement", "Emploi","Autre"]
   end
 
   def update

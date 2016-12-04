@@ -5,9 +5,9 @@
 <div class="container">
   <div class="row">
     <% @posts.each do |post| %>
-      <div class="col-xs-6 col-sm-4 col-lg-3 card-description">
+      <div class="col-xs-12 col-sm-4 col-lg-3 card-description">
         <div class="badge-bordered padded-mini rounded bg-white text-center">
-          <%= cl_image_tag post.photo, height: 280, width: 150, crop: :fit %>
+          <%= cl_image_tag post.photo, height: 280, width: 150, crop: :limit %>
           <div>
             <p><i class="fa fa-map-marker" aria-hidden="true"></i> <i><%= post.owner.city %></i></p>
             <p><strong><%= post.title %></strong></p>

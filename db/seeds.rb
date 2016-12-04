@@ -8,11 +8,11 @@
 Post.destroy_all
 User.destroy_all
 
-malik = User.create(email: "malik@gmail.com", password: "123456", phone: "1234567890")
-reda = User.create(email: "reda@gmail.com", password: "123456", phone: "1234567890")
-amine = User.create(email: "amine@gmail.com", password: "123456", phone: "1234567890")
-latefa = User.create(email: "latefa@gmail.com", password: "123456", phone: "1234567890")
-kawtar = User.create(email: "kawtar@gmail.com", password: "123456", phone: "1234567890")
+malik = User.create(email: "malik@gmail.com", password: "123456", phone: "1234567890", city: "Bizerte")
+reda = User.create(email: "reda@gmail.com", password: "123456", phone: "1234567890", city: "Tunis")
+amine = User.create(email: "amine@gmail.com", password: "123456", phone: "1234567890", city: "Tunis")
+latefa = User.create(email: "latefa@gmail.com", password: "123456", phone: "1234567890", city: "Sfax")
+kawtar = User.create(email: "kawtar@gmail.com", password: "123456", phone: "1234567890", city: "Tunis")
 
 url = "http://lorempixel.com/280/280/"
 

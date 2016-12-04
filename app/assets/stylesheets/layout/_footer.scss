@@ -1,1 +1,21 @@
 // Your footer style
+/* Footer design */
+.footer {
+  background-color: rgb(85,85,85);
+  color: white;
+  font-size: 14px;
+  padding: 30px;
+}
+
+.footer li {
+  font-size: 30px;
+  letter-spacing: 20px;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer a:hover{
+  color: yellow;
+}

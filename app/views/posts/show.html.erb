@@ -15,8 +15,9 @@
       <div class="col-xs-12 col-sm-4">
         <div class="padded-light bg-white card-rounded card-seller">
           <ul> Informations sur le vendeur: </ul>
-            <li><%= @post.owner.email %></li>
-            <li><%= @post.owner.phone %></li>
+            <li><i class="fa fa-envelope" aria-hidden="true"></i>  <%= @post.owner.email %></li>
+            <li><i class="fa fa-mobile" aria-hidden="true"></i>  <%= @post.owner.phone %></li>
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i>  <%= @post.owner.city %></li>
         </div>
         <div class="padded-light bg-white card-rounded card-seller card-advertising">
           <h4> Votre publicite ici </h4>
